@@ -1,22 +1,32 @@
-#GymPass-introduction-Prisma.
+# App
 
-Banco de dados de uma aplicação GymPass onde o usuário poderá se cadastrar e fazer o check-in nas academias cadastradas no sistema. Está sendo desenvolvido com NodeJs, no banco de dados do Prisma.
-O uso do POSTGRESQL no Docker, utilizando o Docker Compose. Foi criado um controller para receber as requisições HTTP e tratar as informações, podendo realizar ações como validar dados, buscar informações do banco de dados e enviar uma resposta ao cliente,
-implementando Repository Pattern e seus benefícios na organização do código. Projeto especifica uma API SOLID.
-Uso do framework Fastify.
-Uso do Container do Docker.
+GymPass Style App.
 
-- Uso da ferramenta Insomnia que permite fazer requisições HTTP de forma prática e intuitiva.
+## RFs (Requisitos funcionais)
 
-![tela1](https://github.com/user-attachments/assets/8bdcd5d5-29e3-454c-b3c9-12d61c7bdbba)
+- [x] Deve ser possível se cadastrar;
+- [x] Deve ser possível se autenticar;
+- [x] Deve ser possível obter o perfil de um usuário logado;
+- [x] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
+- [x] Deve ser possível o usuário obter seu histórico de check-ins;
+- [x] Deve ser possível o usuário buscar academias próximas (até 10km);
+- [x] Deve ser possível o usuário buscar academias pelo nome;
+- [x] Deve ser possível o usuário realizar check-in em uma academia;
+- [x] Deve ser possível validar check-in de um usuário;
+- [x] Deve ser possível cadastrar uma academia;
 
-- Uso do Prisma Studio para visualização da tabela.
-- Uso do bcryptjs para criar as hash das senhas.
+## RNs (Regras de negócio)
 
-![tela2](https://github.com/user-attachments/assets/0ceec192-01b2-4a37-a445-cb743a27d865)
+- [x] O usuário não deve poder se cadastrar com uma e-mail duplicado;
+- [x] O usuário não pode fazer 2 check-ins no mesmo dia;
+- [x] O usuário não pode fazer check-in se não estiver perto (100m) da academia;
+- [x] O check-in só pode ser validado até 20 minutos após criado;
+- [] O check-in só pode ser validado por administradores;
+- [] A academia só pode ser cadastrada por administradores;
 
--Tecnologias utilizadas: JAVASCRIPT. TYPESCRIPT. NODEJS.
+## RNFs (Requisitos não funcionais)
 
--Bibliotecas: Fastify, zod, prisma, bcryptjs, 
-
--Trilha Nodejs - Rocketseat.
+- [x] A senha do usuário tem que estar criptografada;
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
+- [x] Todas listas de dados precisam estar paginadas com 20 itens por página;
+- [] O usuário deve ser identificado por um JWT (JSON Web Token);
