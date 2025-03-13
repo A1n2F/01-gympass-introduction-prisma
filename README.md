@@ -41,4 +41,4 @@ ________________________________________________________________________________
 
 -Tecnologias utilizadas: JAVASCRIPT. TYPESCRIPT. NODEJS.
 
--Bibliotecas: Fastify, zod, prisma, bcryptjs, 
+-Bibliotecas: Fastify, zod, prisma, bcryptjs, Supertest.
