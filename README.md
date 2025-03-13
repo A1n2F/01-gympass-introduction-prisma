@@ -39,6 +39,27 @@ ________________________________________________________________________________
   
 - É implementado o teste end-to-end (e2e) para a criação de usuário, autenticação e perfil, além das rotas da academia e check-in na API, utilizando o pacote Supertest para realizar as requisições HTTP.
 
+ _____________________________________________________________________________________________________________________________________________________
+______________________________________________________________________________________________________________________________________________________
+  ------Refresh Token | RBAC------
+
+- O Refresh Token é uma técnica utilizada para renovar o token de autenticação após seu tempo de validade expirar. O Refresh Token é um token de longa duração que é gerado quando o usuário faz login com suas credenciais. Esse token é usado para obter um novo Access Token quando o antigo expira.
+  
+- Implementação do controller de refresh token, que irá verificar se o token de atualização está presente nos cookies e, se estiver válido, irá gerar um novo token JWT para o usuário.
+  
+- RBAC (Role-Based Access Control) é um modelo de controle de acesso baseado em funções, onde as permissões são atribuídas com base no papel ou função que um usuário possui dentro de uma organização.
+
+- Criação de funções de usuário com permissões específicas e a validação dessas permissões em rotas e controllers. A implementação adequada do RBAC pode ajudar a garantir que apenas usuários autorizados possam acessar determinadas partes da aplicação e realizar ações específicas.
+
+
+- Token de autenticação gerado com permissão de usuário normal.
+![telamember](https://github.com/user-attachments/assets/f221b7a7-bcde-4751-a19c-d0dc8c7a7b49)
+
+- Token de autenticação gerado com permissão de Admin.
+![telaadmin](https://github.com/user-attachments/assets/8d258dc4-1398-4272-a8b7-9688ffaec7f2)
+
+  -font: jwt.io
+
 -Tecnologias utilizadas: JAVASCRIPT. TYPESCRIPT. NODEJS.
 
 -Bibliotecas: Fastify, zod, prisma, bcryptjs, Supertest.
