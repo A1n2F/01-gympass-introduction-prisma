@@ -29,6 +29,16 @@ ________________________________________________________________________________
 - Foi aplicada a metodologia TDD (Test Driven Development), é uma abordagem de desenvolvimento de software em que os testes são escritos antes do código. A implementação seguirá o processo red-green-refactor, em que primeiro serão escritos
 os testes para a funcionalidade, em seguida, a funcionalidade será implementada para passar nos testes e, por fim, será realizada uma refatoração para melhorar o código.
 
+______________________________________________________________________________________________________________________________________________________
+______________________________________________________________________________________________________________________________________________________
+  ------Controllers | Testes E2E------
+
+- Conceito de isolamento de ambiente nos testes end-to-end (e2e), com foco na necessidade de se ter um banco de dados de testes separados do banco de dados de produção. Será implementado um Test Environment do Vitest para o Prisma, que permitirá a criação de um ambiente de testes isolado para os testes e2e.
+  
+- O objetivo é implementar a funcionalidade do arquivo de ambiente do Prisma para o Vitest. Isso será feito manipulando a variável de ambiente DATABASE_URL para gerar uma nova URL com um schema único e executando as migrações.
+  
+- É implementado o teste end-to-end (e2e) para a criação de usuário, autenticação e perfil, além das rotas da academia e check-in na API, utilizando o pacote Supertest para realizar as requisições HTTP.
+
 -Tecnologias utilizadas: JAVASCRIPT. TYPESCRIPT. NODEJS.
 
 -Bibliotecas: Fastify, zod, prisma, bcryptjs, 
